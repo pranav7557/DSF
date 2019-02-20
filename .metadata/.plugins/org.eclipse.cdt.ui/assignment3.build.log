@@ -1,20 +1,6 @@
-15:21:47 **** Incremental Build of configuration Debug for project assignment3 ****
+15:41:19 **** Incremental Build of configuration Debug for project assignment3 ****
 make all 
-Building file: ../src/assignment3.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/assignment3.d" -MT"src/assignment3.o" -o "src/assignment3.o" "../src/assignment3.cpp"
-Finished building: ../src/assignment3.cpp
- 
-Building file: ../src/tree.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/tree.d" -MT"src/tree.o" -o "src/tree.o" "../src/tree.cpp"
-Finished building: ../src/tree.cpp
- 
-Building target: assignment3
-Invoking: GCC C++ Linker
-g++  -o "assignment3"  ./src/assignment3.o ./src/tree.o   
-Finished building target: assignment3
- 
+make: Nothing to be done for 'all'.
 
-15:21:47 Build Finished. 0 errors, 0 warnings. (took 727ms)
+15:41:19 Build Finished. 0 errors, 0 warnings. (took 365ms)
 

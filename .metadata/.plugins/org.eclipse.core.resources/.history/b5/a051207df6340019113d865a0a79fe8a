@@ -94,10 +94,7 @@ node *bst::findminvalue(node *T)
 node *bst::removebst(node *root, int key)
 {
 	if (root == NULL)
-	{
 		cout << "\nData NOT Found !\n";
-		return root;
-	}
 	if (key < root->data)
 		root->left = removebst(root->left, key);
 	else if (key > root->data)
@@ -143,15 +140,15 @@ void bst::mirrorimage(node *root)
 		return;
 	else
 	{
-		temp = p->right;	  //Storin right in temp
-		p->right = p->left;   //Making right as left
-		p->left = temp;		  //Making left as right
-		mirrorimage(p->left); //Calling recurssively
+		temp = p->right;	  //storin right in temp
+		p->right = p->left;   //making right as left
+		p->left = temp;		  //making left as right
+		mirrorimage(p->left); //calling recurssively
 		mirrorimage(p->right);
 	}
 }
 
-void bst::preordertrav(node *root)	//Preorder traversal
+void bst::preordertrav(node *root)
 {
 
 	if (root == NULL)
@@ -159,7 +156,7 @@ void bst::preordertrav(node *root)	//Preorder traversal
 		return;
 	}
 	else if (root != NULL)
-	{
+	{ 							//root left right (pre)
 		cout << root->data << " ";
 		preordertrav(root->left);
 		preordertrav(root->right);
@@ -173,13 +170,13 @@ void bst::levelwise(node *root)
 		cout << "Tree is Empty !";
 	else
 	{
-		q.enqueue(root);	 //Enqueuing root
-		while (!q.IsEmpty())
+		q.enqueue(root);	 //enqueuing root
+		while (!q.IsEmpty()) //upto queue is not empty
 		{
-			node *T = q.dequeue();
+			node *T = q.dequeue(); //dequeuing and printing it
 			cout << T->data << " ";
 			if (T->left != NULL)
-				q.enqueue(T->left);
+				q.enqueue(T->left); //first enqueuing left because it wl be printed frst
 			if (T->right != NULL)
 				q.enqueue(T->right);
 		}

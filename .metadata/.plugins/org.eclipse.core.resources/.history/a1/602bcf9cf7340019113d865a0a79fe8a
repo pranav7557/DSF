@@ -94,10 +94,7 @@ node *bst::findminvalue(node *T)
 node *bst::removebst(node *root, int key)
 {
 	if (root == NULL)
-	{
 		cout << "\nData NOT Found !\n";
-		return root;
-	}
 	if (key < root->data)
 		root->left = removebst(root->left, key);
 	else if (key > root->data)

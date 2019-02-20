@@ -23,8 +23,8 @@ bool queue<T>::IsEmpty()
 template <class T>
 void queue<T>::enqueue(T a)
 {
-	QNode<T> *ptr = new QNode<T>;
-	ptr->data = a;
+	QNode<T> *ptr = new QNode<T>; //making ptr node
+	ptr->data = a;				  //saving all information in that node
 	ptr->next = NULL;
 	if (front == NULL)
 	{
@@ -41,7 +41,7 @@ void queue<T>::enqueue(T a)
 template <class T>
 T queue<T>::dequeue()
 {
-	T a; //Taking node to store information about deleted node
+	T a; //taking node to store information about deleted node
 	QNode<T> *ptr = front;
 	a = ptr->data; //node T=*ptr means whole information of front node is now in T node
 	if (front == NULL && rear == NULL)

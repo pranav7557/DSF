@@ -96,7 +96,7 @@ node *bst::removebst(node *root, int key)
 	if (root == NULL)
 	{
 		cout << "\nData NOT Found !\n";
-		return root;
+		return ;
 	}
 	if (key < root->data)
 		root->left = removebst(root->left, key);

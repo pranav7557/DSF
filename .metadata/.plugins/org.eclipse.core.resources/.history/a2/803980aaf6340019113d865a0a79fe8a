@@ -39,7 +39,7 @@ int main()
 		case 3:
 			cout << "\nEnter The Element You Want to Search : ";
 			cin >> key;
-			bt.searchbst(bt.getroot(), key); //Calling search function
+			bt.searchbst(bt.getroot(), key); //calling search function
 			break;
 		case 4:
 			cout << "\nEnter The Element You Want to delete : ";

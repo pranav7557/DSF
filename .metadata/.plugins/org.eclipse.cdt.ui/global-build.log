@@ -1,12 +1,6 @@
-15:22:04 **** Incremental Build of configuration Debug for project assignment5 ****
+15:41:19 **** Incremental Build of configuration Debug for project assignment3 ****
 make all 
-Building file: ../src/assignment5.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/assignment5.d" -MT"src/assignment5.o" -o "src/assignment5.o" "../src/assignment5.cpp"
-Finished building: ../src/assignment5.cpp
- 
-Building target: assignment5
-Invoking: GCC C++ Linker
-g++  -o "assignment5"  ./src/assignment5.o ./src/bst.o ./src/queue.o   
-Finished building target: assignment5
- 
+make: Nothing to be done for 'all'.
+15:41:20 **** Incremental Build of configuration Debug for project assignment5 ****
+make all 
+make: Nothing to be done for 'all'.

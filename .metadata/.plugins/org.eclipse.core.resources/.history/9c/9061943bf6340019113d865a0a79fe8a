@@ -22,7 +22,7 @@ node *bst::getroot()
 node *bst::maketree(int data)
 {
 	node *p;
-	p = new (node); //Allocating memory dynamically
+	p = new (node); //allocating memory dynamically
 	p->data = data;
 	p->left = NULL;
 	p->right = NULL;
@@ -34,13 +34,13 @@ void bst::insert(node *temp, int data)
 	node *p;
 	if (root == NULL)
 	{
-		root = maketree(data); 		//If root is not made make root
+		root = maketree(data); 		//if root is not made make root
 		return;
 	}
 	else
 	{
 		p = temp;
-		if (data < p->data)	 	//If data to be insert is less, insert at left
+		if (data < p->data)	 	//if data to be insert is less, insert at left
 		{
 			if (p->left != NULL)
 				insert(p->left, data);
@@ -48,7 +48,7 @@ void bst::insert(node *temp, int data)
 				p->left = maketree(data);
 		}
 
-		else 	//If data to be insert is greater, insert at right
+		else 	//if data to be insert is greater, insert at right
 		{
 			if (p->right != NULL)
 				insert(p->right, data);
@@ -68,9 +68,9 @@ void bst::searchbst(node *root, int key)
 		p = root;
 
 		if (key < p->data)
-			searchbst(p->left, key);
+			searchbst(p->left, key); 	//recurssive if data is less than root
 
-		else if (key > p->data)
+		else if (key > p->data) 	//recurssive if data is greater than root
 			searchbst(p->right, key);
 
 		else if (key == p->data)
@@ -86,7 +86,7 @@ void bst::searchbst(node *root, int key)
 node *bst::findminvalue(node *T)
 {
 	node *current = T;			  //T is keys right subtree
-	while (current->left != NULL)
+	while (current->left != NULL) //going to left upto min value is not found
 		current = current->left;
 	return current;
 }
@@ -94,45 +94,42 @@ node *bst::findminvalue(node *T)
 node *bst::removebst(node *root, int key)
 {
 	if (root == NULL)
-	{
 		cout << "\nData NOT Found !\n";
-		return root;
-	}
 	if (key < root->data)
 		root->left = removebst(root->left, key);
 	else if (key > root->data)
 		root->right = removebst(root->right, key);
 	else
 	{
-		if (root->left == NULL && root->right == NULL) //For leaf node
+		if (root->left == NULL && root->right == NULL) //for leaf node
 		{
 			delete root;
 			root = NULL;
 		}
 
-		else if (root->left == NULL) //For lchild ie. 1 child
+		else if (root->left == NULL) //for lchild ie. 1 child
 		{
 			node *p;
 			p = root;
 			root = root->right;
 			delete p;
 		}
-		else if (root->right == NULL) //For rchild ie. 1 child
+		else if (root->right == NULL) //for rchild ie. 1 child
 		{
 			node *p;
 			p = root;
 			root = root->left;
 			delete p;
 		}
-		else //If both the children are present
+		else //for 2 child
 		{
 			node *p;
-			p = findminvalue(root->right); //Finding min and then substituting it
+			p = findminvalue(root->right); //finding min and then substituting it
 			root->data = p->data;
-			root->right = removebst(root->right, p->data); //For deleting that node call
+			root->right = removebst(root->right, p->data); //for deleting that node call
 		}
 	}
-	return root; //Return statement for making NULL
+	return root; //return statement for making NULL
 }
 
 void bst::mirrorimage(node *root)
@@ -143,15 +140,15 @@ void bst::mirrorimage(node *root)
 		return;
 	else
 	{
-		temp = p->right;	  //Storin right in temp
-		p->right = p->left;   //Making right as left
-		p->left = temp;		  //Making left as right
-		mirrorimage(p->left); //Calling recurssively
+		temp = p->right;	  //storin right in temp
+		p->right = p->left;   //making right as left
+		p->left = temp;		  //making left as right
+		mirrorimage(p->left); //calling recurssively
 		mirrorimage(p->right);
 	}
 }
 
-void bst::preordertrav(node *root)	//Preorder traversal
+void bst::preordertrav(node *root)
 {
 
 	if (root == NULL)
@@ -159,7 +156,7 @@ void bst::preordertrav(node *root)	//Preorder traversal
 		return;
 	}
 	else if (root != NULL)
-	{
+	{ 							//root left right (pre)
 		cout << root->data << " ";
 		preordertrav(root->left);
 		preordertrav(root->right);
@@ -173,13 +170,13 @@ void bst::levelwise(node *root)
 		cout << "Tree is Empty !";
 	else
 	{
-		q.enqueue(root);	 //Enqueuing root
-		while (!q.IsEmpty())
+		q.enqueue(root);	 //enqueuing root
+		while (!q.IsEmpty()) //upto queue is not empty
 		{
-			node *T = q.dequeue();
+			node *T = q.dequeue(); //dequeuing and printing it
 			cout << T->data << " ";
 			if (T->left != NULL)
-				q.enqueue(T->left);
+				q.enqueue(T->left); //first enqueuing left because it wl be printed frst
 			if (T->right != NULL)
 				q.enqueue(T->right);
 		}
