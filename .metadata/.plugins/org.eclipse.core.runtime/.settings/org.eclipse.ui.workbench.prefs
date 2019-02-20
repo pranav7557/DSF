@@ -1,0 +1,15 @@
+//org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+PLUGINS_NOT_ACTIVATED_ON_STARTUP=;org.eclipse.m2e.discovery;
+REMOTE_COMMANDS_VIEW_FONT=1|Monospace|12.0|0|GTK|1|;
+eclipse.preferences.version=1
+org.eclipse.dltk.debug.ui.dbgpLogView.txtViewFont=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.dltk.ruby.internal.ui.compare.RubyMergeViewer=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.dltk.tcl.internal.ui.compare.TclMergeViewer=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.mat.ui.notesfont=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.pde.internal.ui.compare.ManifestContentMergeViewer=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.pde.internal.ui.compare.PluginContentMergeViewer=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.tracecompass.tmf.ui.font.eventraw=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.wst.jsdt.internal.ui.compare.JavaMergeViewer=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.wst.jsdt.ui.editors.textfont=1|Monospace|12.0|0|GTK|1|;
+org.eclipse.xtend.ui.editors.textfont=1|Monospace|12.0|0|GTK|1|;
+pref_console_font=1|Monospace|12.0|0|GTK|1|;

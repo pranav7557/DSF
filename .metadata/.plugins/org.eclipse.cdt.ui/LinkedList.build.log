@@ -1,0 +1,6 @@
+13:03:53 **** Incremental Build of configuration Release for project LinkedList ****
+make all 
+make: Nothing to be done for 'all'.
+
+13:03:53 Build Finished. 0 errors, 0 warnings. (took 363ms)
+

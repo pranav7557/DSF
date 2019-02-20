@@ -1,0 +1,40 @@
+
+#ifndef BTREE_H_
+#define BTREE_H_
+
+struct bnode
+{
+	char data;
+	bnode*left;
+	bnode *right;
+};
+
+class btree {						//marking as function declerations
+
+public:
+
+	bnode* root;					//root of treee
+
+	btree();
+	virtual ~btree();
+
+	bnode* maketree(char);
+
+	bool isOperand(char);
+	bool isOperator(char);
+
+	void create_exptree_post();
+
+	void dispinorder(bnode* root);
+	void disppreorder(bnode* root);
+	void disppostorder(bnode* root);
+
+	void dispInorderNonRec();
+	void dispPreorderNonRec();
+    void disppostorderNonRec();
+
+
+
+};
+
+#endif /* BTREE_H_ */

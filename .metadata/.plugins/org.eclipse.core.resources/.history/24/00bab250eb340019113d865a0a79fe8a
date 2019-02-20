@@ -1,0 +1,17 @@
+/*
+ * queue.h
+ *
+ *  Created on: 20-Feb-2019
+ *      Author: ml-12
+ */
+
+#ifndef QUEUE_H_
+#define QUEUE_H_
+
+class queue {
+public:
+	queue();
+	virtual ~queue();
+};
+
+#endif /* QUEUE_H_ */

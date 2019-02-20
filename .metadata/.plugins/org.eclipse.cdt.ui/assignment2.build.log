@@ -1,0 +1,6 @@
+15:01:04 **** Incremental Build of configuration Release for project assignment2 ****
+make all 
+make: Nothing to be done for 'all'.
+
+15:01:05 Build Finished. 0 errors, 0 warnings. (took 365ms)
+

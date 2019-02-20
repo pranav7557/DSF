@@ -1,0 +1,17 @@
+/*
+ * bst.h
+ *
+ *  Created on: 20-Feb-2019
+ *      Author: ml-12
+ */
+
+#ifndef BST_H_
+#define BST_H_
+
+class bst {
+public:
+	bst();
+	virtual ~bst();
+};
+
+#endif /* BST_H_ */

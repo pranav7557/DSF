@@ -1,0 +1,18 @@
+/*
+ * btree.cpp
+ *
+ *  Created on: 13-Feb-2019
+ *      Author: ml-12
+ */
+
+#include "btree.h"
+
+btree::btree() {
+	// TODO Auto-generated constructor stub
+
+}
+
+btree::~btree() {
+	// TODO Auto-generated destructor stub
+}
+

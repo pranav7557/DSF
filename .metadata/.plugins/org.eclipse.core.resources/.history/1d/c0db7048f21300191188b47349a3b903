@@ -1,0 +1,112 @@
+//==========================================================================
+// Name        : assignment1.cpp
+// Author      : Pranav
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//==========================================================================
+
+#include "Stack.h"
+#include <iostream>
+#include "Stack.cpp"
+
+using namespace std;
+
+int priority(char);
+bool right(char);
+bool left(char);
+bool isOperator(char);
+bool isOperand(char);
+
+int main()
+{
+
+}
+
+int priority(char c)
+{
+	switch(c)
+	{
+		case '+':
+		case '-':return 1;
+
+		case '*':
+		case '/':return 2;
+
+		case '^':return 3;
+
+		default:return 0;
+	}
+}
+
+bool right(char c)
+{
+	if(c=='^')
+		return 1;
+	else
+		return 0;
+}
+
+bool left(char c)
+{
+	if(c=='+' || c=='-' || c=='*' || c=='/')
+		return 1;
+	else
+		return 0;
+}
+
+bool isOperator(char c)
+{
+	if(c=='+' || c=='-' || c=='*' || c=='/' || c=='^')
+		return 1;
+	else
+		return 0;
+}
+
+int inToPost(char exp[])
+{
+	Stack<char> s;
+	char c,o;
+	int i = 0;
+	while(exp[i]!='\0')
+	{
+		c = exp[i];
+		if(!s.isEmpty())
+		{
+			o = s.pop();
+			s.push(o);
+			if(priority(c)==0)
+			{
+				cout<<exp[i];
+			}
+			else if(priority(c)<priority(o))
+			{
+				{
+					cout<<s.pop();
+				}
+				else if(priority(c)>=priority(o))
+				{
+					s.push(c);
+				}
+
+			}
+			else
+			{
+				if(priority(c)==0)
+				{
+					cout<<exp[i];
+				}
+				else
+				{
+					s.push(exp[i]);
+				}
+			}
+			i++;
+		}
+		while(!s.isEmpty())
+		{
+			cout<<s.pop();
+		}
+}
+
+

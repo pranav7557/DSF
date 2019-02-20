@@ -1,0 +1,17 @@
+/*
+ * btree.h
+ *
+ *  Created on: 13-Feb-2019
+ *      Author: ml-12
+ */
+
+#ifndef BTREE_H_
+#define BTREE_H_
+
+class btree {
+public:
+	btree();
+	virtual ~btree();
+};
+
+#endif /* BTREE_H_ */
