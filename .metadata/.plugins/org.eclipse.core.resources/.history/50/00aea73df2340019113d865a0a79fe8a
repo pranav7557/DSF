@@ -14,11 +14,6 @@ bst::~bst()
 	// TODO Auto-generated destructor stub
 }
 
-node *bst::getroot()
-{
-	return (root);
-}
-
 node *bst::maketree(int data)
 {
 	node *p;
@@ -97,7 +92,7 @@ node *bst::removebst(node *root, int key)
 		cout << "\nData NOT Found !\n";
 	if (key < root->data)
 		root->left = removebst(root->left, key);
-	else if (key > root->data)
+	else if (root->data < key)
 		root->right = removebst(root->right, key);
 	else
 	{

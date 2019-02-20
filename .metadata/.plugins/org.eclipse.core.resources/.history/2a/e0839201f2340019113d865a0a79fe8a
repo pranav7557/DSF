@@ -14,11 +14,6 @@ bst::~bst()
 	// TODO Auto-generated destructor stub
 }
 
-node *bst::getroot()
-{
-	return (root);
-}
-
 node *bst::maketree(int data)
 {
 	node *p;
@@ -34,13 +29,13 @@ void bst::insert(node *temp, int data)
 	node *p;
 	if (root == NULL)
 	{
-		root = maketree(data); 		//if root is not made make root
+		root = maketree(data); //if root is not made make root
 		return;
 	}
 	else
 	{
 		p = temp;
-		if (data < p->data)	 	//if data to be insert is less, insert at left
+		if (data < p->data) //if data to be insert is less, insert at left
 		{
 			if (p->left != NULL)
 				insert(p->left, data);
@@ -48,8 +43,9 @@ void bst::insert(node *temp, int data)
 				p->left = maketree(data);
 		}
 
-		else 	//if data to be insert is greater, insert at right
+		else //if data to be insert is greater, insert at right
 		{
+
 			if (p->right != NULL)
 				insert(p->right, data);
 			else
@@ -95,9 +91,9 @@ node *bst::removebst(node *root, int key)
 {
 	if (root == NULL)
 		cout << "\nData NOT Found !\n";
-	if (key < root->data)
+	if (root->data > key)
 		root->left = removebst(root->left, key);
-	else if (key > root->data)
+	else if (root->data < key)
 		root->right = removebst(root->right, key);
 	else
 	{

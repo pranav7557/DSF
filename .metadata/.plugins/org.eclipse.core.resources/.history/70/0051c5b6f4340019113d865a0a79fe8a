@@ -1,7 +1,7 @@
 #ifndef BST_H_
 #define BST_H_
 
-struct node
+struct node //structure node decleration
 {
 	int data;
 	struct node *left;
@@ -9,9 +9,8 @@ struct node
 };
 class bst
 {
-	node *root;
   public:
-
+	node *root; //decleratio root and functions
 	bst();
 	node *getroot();
 	node *maketree(int);

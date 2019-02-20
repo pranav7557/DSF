@@ -16,7 +16,7 @@ bst::~bst()
 
 node *bst::getroot()
 {
-	return (root);
+	return root;
 }
 
 node *bst::maketree(int data)

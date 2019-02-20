@@ -14,11 +14,6 @@ bst::~bst()
 	// TODO Auto-generated destructor stub
 }
 
-node *bst::getroot()
-{
-	return (root);
-}
-
 node *bst::maketree(int data)
 {
 	node *p;

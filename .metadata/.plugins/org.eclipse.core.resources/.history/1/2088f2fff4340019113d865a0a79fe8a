@@ -11,7 +11,7 @@ class bst
 {
 	node *root;
   public:
-
+	node *root;
 	bst();
 	node *getroot();
 	node *maketree(int);

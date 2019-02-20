@@ -16,7 +16,7 @@ int main()
 	int height;
 	do
 	{
-		cout << "\nMENU \n1.Insert\n2.Display\n3.Depth\n4.Leaf Nodes\n5.Copy Of Tree\n\nEnter Your Choice : ";
+		cout << "\nMENU \n1)Insert\n2)Display\n3)Depth\n4)Leaf Nodes\n5)Copy Of Tree\n\nEnter Your Choice : ";
 		cin >> ch;
 		switch (ch)
 		{

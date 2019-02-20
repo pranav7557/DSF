@@ -1,9 +1,9 @@
-14:54:52 **** Incremental Build of configuration Debug for project assignment5 ****
+15:22:04 **** Incremental Build of configuration Debug for project assignment5 ****
 make all 
-Building file: ../src/bst.cpp
+Building file: ../src/assignment5.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/bst.d" -MT"src/bst.o" -o "src/bst.o" "../src/bst.cpp"
-Finished building: ../src/bst.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/assignment5.d" -MT"src/assignment5.o" -o "src/assignment5.o" "../src/assignment5.cpp"
+Finished building: ../src/assignment5.cpp
  
 Building target: assignment5
 Invoking: GCC C++ Linker

@@ -19,7 +19,7 @@ int main()
 	bst bt;
 	do
 	{
-		cout << "\nMENU \n1.Insert\n2.Display\n3.Search\n4.Delete\n5.Mirror Image\n6.Level Wise Display\n\nEnter Your Choice : ";
+		cout << "\nMENU \n1)Insert\n2)Display\n3)Search\n4)Delete\n5)Mirror Image\n6)LevelWise Display\n\nEnter Your Choice : ";
 		cin >> ch;
 		switch (ch)
 		{

@@ -19,42 +19,42 @@ int main()
 	bst bt;
 	do
 	{
-		cout << "\nMENU \n1.Insert\n2.Display\n3.Search\n4.Delete\n5.Mirror Image\n6.Level Wise Display\n\nEnter Your Choice : ";
+		cout << "\nMENU \n1)Insert\n2)Display\n3)Search\n4)Delete\n5)Mirror Image\n6)LevelWise Display\n\nEnter Your Choice : ";
 		cin >> ch;
 		switch (ch)
 		{
 		case 1:
 			cout << "\nEnter data: ";
 			cin >> data;
-			bt.insert(bt.getroot(), data); //calling insert function
+			bt.insert(bt.root, data); //calling insert function
 			cout << endl;
 			break;
 		case 2:
-			bt.display(bt.getroot(), 0);
+			bt.display(bt.root, 0);
 			cout << endl;
 			cout << "\nPreorder display is : "; //calling display function
-			bt.preordertrav(bt.getroot());
+			bt.preordertrav(bt.root);
 			cout << endl;
 			break;
 		case 3:
 			cout << "\nEnter The Element You Want to Search : ";
 			cin >> key;
-			bt.searchbst(bt.getroot(), key); //calling search function
+			bt.searchbst(bt.root, key); //calling search function
 			break;
 		case 4:
 			cout << "\nEnter The Element You Want to delete : ";
 			cin >> key;
-			bt.removebst(bt.getroot(), key); //calling remove function
+			bt.removebst(bt.root, key); //calling remove function
 			break;
 		case 5:
 			cout << "\nMirror Image Of Tree Is : ";
-			bt.mirrorimage(bt.getroot()); //calling mirror imgage function
-			bt.display(bt.getroot(), 0);
+			bt.mirrorimage(bt.root); //calling mirror imgage function
+			bt.display(bt.root, 0);
 			cout << endl;
 			break;
 		case 6:
 			cout << "\nLevel Wise Display  Is : ";
-			bt.levelwise(bt.getroot()); //calling levelwise function
+			bt.levelwise(bt.root); //calling levelwise function
 			cout << endl;
 			break;
 		}
